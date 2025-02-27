@@ -23,6 +23,7 @@ RUN apk update && \
     libjpeg-turbo-dev \
     libwebp-dev \
     libzip-dev \
+    github-cli \
     netcat-openbsd && \
     rm -rf /var/cache/apk/*
 
