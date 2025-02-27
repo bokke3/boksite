@@ -74,16 +74,16 @@
         },
         {
             "name": "awcodes/filament-curator",
-            "version": "v3.6.18",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/awcodes/filament-curator.git",
-                "reference": "fa4b9a0b4e2ae41024c8898b73f9c60982b87184"
+                "reference": "914f41c6541a47dda97514ee4cbac117681d013d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/awcodes/filament-curator/zipball/fa4b9a0b4e2ae41024c8898b73f9c60982b87184",
-                "reference": "fa4b9a0b4e2ae41024c8898b73f9c60982b87184",
+                "url": "https://api.github.com/repos/awcodes/filament-curator/zipball/914f41c6541a47dda97514ee4cbac117681d013d",
+                "reference": "914f41c6541a47dda97514ee4cbac117681d013d",
                 "shasum": ""
             },
             "require": {
@@ -143,7 +143,7 @@
             ],
             "support": {
                 "issues": "https://github.com/awcodes/filament-curator/issues",
-                "source": "https://github.com/awcodes/filament-curator/tree/v3.6.18"
+                "source": "https://github.com/awcodes/filament-curator/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -151,7 +151,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-25T15:12:07+00:00"
+            "time": "2025-02-27T17:42:55+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
