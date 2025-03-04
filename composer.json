@@ -9,6 +9,7 @@
         "awcodes/filament-curator": "^3.6",
         "blade-ui-kit/blade-icons": "^1.8",
         "filament/filament": "^3.2",
+        "firefly/filament-blog": "^2.0",
         "laravel/framework": "^11.9",
         "laravel/jetstream": "^5.3",
         "laravel/sanctum": "^4.0",

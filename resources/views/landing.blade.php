@@ -14,53 +14,74 @@
 
     {{-- Fallback Styles (if Vite isn't available) --}}
     <style>
-        body {
-            font-family: 'Figtree', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
         }
 
+        body {
+            font-family: 'Figtree', Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navbar */
         .navbar {
-            position: fixed;
-            top: 0;
             width: 100%;
             background: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
         }
 
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #ff6600;
+        }
+
+        /* Hero Section */
         .hero {
-            background: url('{{ asset('images/hero-image.jpg') }}') no-repeat center center/cover;
+            width: 100%;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            background: url('{{ asset('images/hero-image.jpg') }}') no-repeat center center/cover;
             color: black;
-            padding-top: 60px; /* Adjust for navbar height */
+            padding-top: 60px;
         }
 
         .hero h1 {
-            font-size: 3em;
-            margin: 0;
-            line-height: 1.4;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
         .hero p {
-            font-size: 1.5em;
-            margin: 10px 0;
-            line-height: 1.6;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .hero button {
             padding: 12px 24px;
-            font-size: 1.1em;
+            font-size: 1.2rem;
             background-color: #ff6600;
             border: none;
             color: white;
@@ -72,18 +93,53 @@
             background-color: #e65c00;
         }
 
-        .content, .testimonials, .footer {
+        /* Flexbox Sections */
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 0;
         }
 
+        /* Content Section */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Testimonials */
         .testimonials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             background-color: #f9f9f9;
+            padding: 40px 20px;
+            width: 100%;
         }
 
+        .testimonial {
+            flex: 1 1 300px;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
         .footer {
+            width: 100%;
             background-color: #333;
             color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
         }
 
         .footer a {
@@ -95,9 +151,12 @@
             text-decoration: underline;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .hero p { font-size: 1em; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.2rem; }
+            .navbar { flex-direction: column; align-items: center; }
+            .navbar a { margin: 5px 0; }
         }
 
         /* Dark Mode */
@@ -112,6 +171,10 @@
 
         .dark-theme .hero button {
             background-color: #ff8800;
+        }
+
+        .dark-theme .footer {
+            background: #111;
         }
     </style>
 </head>
@@ -133,14 +196,13 @@
     </section>
 
     {{-- Content Section --}}
-    <section class="content">
+    <section class="container content">
         <h2>Why Choose Us?</h2>
         <p>Our CMS offers the best tools for content creation, management, and customization.</p>
     </section>
 
     {{-- Testimonials Section --}}
     <section class="testimonials">
-        <h2>What Our Users Say</h2>
         <div class="testimonial">
             <p>"This CMS transformed our workflow!"</p>
             <span>- Happy Customer</span>
@@ -153,7 +215,7 @@
 
     {{-- Footer --}}
     <footer class="footer">
-        <p>&copy; {{ date('Y') }} CMS Inc. All rights reserved.</p>
+        <p>&copy; {{ date('Y') }} METI Inc. All rights reserved.</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 
