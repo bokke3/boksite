@@ -24,6 +24,6 @@ Route::middleware([
 
 
 // Redirect guests trying to access the admin panel
-Route::get('/admin', function () {
-    return redirect()->route('login');
-})->middleware('guest');
+//Route::get('/admin', function () {
+//    return redirect()->route('login');
+//})->middleware('guest');
